@@ -198,12 +198,12 @@
 			}
 
 			.cornerimg {
-				position: absolute;    /* relative to the parent section */
-				top: -40px;         /* pull it up above the section, like the pepper does */
-				right: 20px;         /* distance from the right edge */
-				width: 180px;         /* adjust size to taste */
-				transform: rotate(-15deg); /* the tilt, like the pepper */
-				z-index: 2;           /* sits above the section background */
+				position: absolute;    
+				top: -40px;         
+				right: 5px;         
+				width: 120px;         
+				transform: rotate(-15deg); 
+				z-index: 2;           
 			}
 
 
