@@ -3,184 +3,7 @@
 	<head>
 		<title>Positioning Items</title>
 		<meta charset="UTF-8" />
-		<style>
-			/*////////////////////
-			     // Positioning items
-			     //////////////////////
-
-			     Reset *
-			     Display: inline vs block
-			     https://www.w3schools.com/cssref/pr_class_display.asp
-
-			     Box-sizing
-			     https://www.w3schools.com/css/css3_box-sizing.asp
-
-			     Using percentages and max-width
-			     https://www.w3schools.com/cssref/css_units.asp
-
-			     Float and clear
-			     https://www.w3schools.com/cssref/pr_class_float.asp
-
-			     Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
-
-			     Absolute/Relative positioning
-			     https://www.w3schools.com/cssref/pr_class_position.asp
-
-			     Centering
-			     https://www.w3schools.com/css/css_align.asp
-
-			     */
-
-			* {
-                box-sizing: border-box;
-			}
-
-			body {
-                margin: 0;
-			}
-
-			.box {
-				height: 50px;
-				width: 20%;
-				padding: 5px;
-				/*margin: 40px 40px 40px 40px;*/
-				/*border: 3px dashed rgb(236, 104, 104);*/
-
-                float: left;
-
-				color: aliceblue;
-				/* display: inline-block; */
-			}
-
-			#red {
-				background-color: red;
-			}
-			#green {
-				background-color: green;
-			}
-			#blue {
-				background-color: blue;
-			}
-			#yellow {
-				background-color: yellow;
-				color: black;
-			}
-			#orange {
-				background-color: orange;
-			}
-
-			.clear {
-				clear: both;
-			}
-
-			/* img */
-			img {
-			}
-
-			/* container */
-			.container {
-			}
-
-			/* relative and absolute positioning with blue */
-			#blue {
-			}
-
-			p {
-				color: rgb(167, 200, 145);
-			}
-
-			p {
-				color: rgb(26, 66, 199);
-			}
-			.pink {
-				color: pink;
-			}
-			#black {
-				color: black;
-			}
-			.black {
-				color: black;
-			}
-			.bigfont {
-				font-size: 20px;
-			}
-			.important {
-				color: orange !important;
-			}
-
-			nav {
-				/* display: flex; */
-			}
-			main {
-				background-color: rgb(230, 230, 160);
-				padding: 30px;
-				width: 50%;
-				margin: auto;
-				margin-top: 50px;
-                /*overflow: hidden;*/
-			}
-            .kukkaimg {
-                /*relative to the parent element*/
-                width: 200px;
-                float: left;
-                margin-right: 20px;
-                margin-bottom: 20px;
-            }
-
-            footer {
-                background-color: rgb(130, 74, 34);
-                color: white;
-                text-align: center;
-                margin-top: 40px;
-                height: 100px;
-                padding-top: 44px;
-            }
-
-			.topbar {
-				background-color: rgb(130, 74, 34);
-				width: 100%;
-				padding: 0 20px;
-			}
-
-            ul {
-                list-style-type: none;
-                padding: 0;
-				float: left;
-				margin: 0;
-            }
-
-            li {
-                background-color: rgb(130, 74, 34);
-                padding: 20px 15px;
-                margin-bottom: 0;
-				width: auto;
-                float: left;
-				text-align: center;
-            }
-
-			h1 {
-				color: black;
-				float: left;
-				margin: 0;
-				margin-right: 40px;
-				padding: 20px 0;
-				pointer-events: none;
-			}
-
-			.clearfix::after {
-				content: "";
-				clear: both;
-				display: table;
-			}
-
-			ul li:hover {
-				background-color: rgb(130, 74, 34);
-				color: white;
-			}
-
-
-        
-		</style>
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 
 	<body>
@@ -191,6 +14,12 @@
 			<span>Kiva</span>
 			sivustoni
 		</h1>
+
+		<dialog>
+			<h2>Rekisteröidy</h2>
+			<p>Rekisteröidy tähän</p>
+			<button id="close-dialog">Close</button>
+		</dialog>
 
 
 		<ul>
@@ -206,8 +35,16 @@
 
 		<h2>Lisää sisältöä kohta...</h2>
 
+		<button id="open_dialog">Avaa dialogi</button>
+
+
+		
 		<main>
 
+			<img class="cornerimg" src="img/purple-flower.png" alt="Sininen kukka"/>
+
+
+		
 			<img class="kukkaimg" src="img/images-flower.jpg" alt="Kaunis Kukka" />
 			<h3>Lisää kukasta</h3>
 
@@ -231,6 +68,27 @@
 		</main>
 
 		<footer>Copyright</footer>
+		<script>
+
+			const openDialogButton = document.getElementById("open_dialog");
+			const closeDialogButton = document.getElementById("close-dialog");
+			const dialog = document.querySelector("dialog");
+
+			openDialogButton.addEventListener("click", () => {
+				dialog.showModal();
+			});
+
+			closeDialogButton.addEventListener("click", () => {
+				dialog.close();
+			});
+
+			/*const openDialog = () => {
+				dialog.showModal();
+				dialog.close();
+			}
+
+			openDialogButton.addEventListener("click", openDialog);*/
+		</script>
 
 
 	</body>
