@@ -211,5 +211,13 @@
 				z-index: 2;           
 			}
 
+			:root {
+				--spicy-orange: #D35416ff;
+				--dark-spruce: #2F4F2Bff;
+				--brandy: #95290Eff;
+				--granite: #476659ff;
+				--dark-spruce-2: #254A28ff;
+			}
+
 
 			
