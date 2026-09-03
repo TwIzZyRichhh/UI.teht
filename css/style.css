@@ -218,6 +218,94 @@
 				--granite: #476659ff;
 				--dark-spruce-2: #254A28ff;
 			}
+			
+			/*body::before {
+			content: "";
+			position: fixed;
+			top: -20px;
+			left: -20px;
+			right: -20px;
+			bottom: -20px;
+			background-image: url('../img/leaf-texture.jpg');
+			background-size: cover;
+			background-position: center;
+			filter: blur(8px) brightness(0.85);
+			z-index: -1;
+			}*/
+
+
+			@media (max-width: 768px) {
+
+			main {
+				width: 90%;
+				padding: 20px;
+			}
+
+			.box {
+				width: 100%;
+				float: none;
+			}
+
+			.kukkaimg {
+				float: none;
+				width: 100%;
+				max-width: 300px;
+				display: block;
+				margin: 0 auto 20px auto;
+			}
+
+			.cornerimg {
+				width: 70px;
+				top: -25px;
+				right: 5px;
+			}
+
+			.topbar {
+				position: static; 
+				padding: 10px;
+			}
+
+			h1 {
+				float: none;
+				text-align: center;
+				margin: 0 0 10px 0;
+				padding: 10px 0;
+			}
+
+			ul {
+				float: none;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			li {
+				float: none;
+				width: 100%;
+				text-align: center;
+			}
+
+			footer {
+				height: auto;
+				padding: 20px 10px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			main {
+				width: 100%;
+				padding: 15px;
+			}
+
+			h1 {
+				font-size: 22px;
+			}
+
+			.cornerimg {
+				width: 50px;
+				top: -18px;
+			}
+		}
 
 
 			
