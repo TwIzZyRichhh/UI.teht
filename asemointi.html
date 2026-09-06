@@ -19,6 +19,30 @@
 		<dialog>
 			<h2>Rekisteröidy</h2>
 			<p>Rekisteröidy tähän</p>
+
+
+			<form id="register-form" novalidate>	
+				<label for="name">Nimi:</label>	
+				<input type="text" id="name" name="name" minlength="4" required />
+
+				<span id="name-error" style="color: red; display: none;">
+            		Nimen pitää olla vähintään 3 kirjainta pitkä.
+       			</span>	
+
+				<br>
+
+				<label for="email">Sähköposti:</label>
+				<input type="email" id="email" name="email" required />
+
+				<br>
+
+				<label for="password">Salasana:</label>
+				<input type="password" id="password" name="password" minlength="6" required />
+
+				<br>
+
+				<button type="submit">Lähetä</button>
+
 			<button id="close-dialog">Close</button>
 		</dialog>
 
@@ -80,6 +104,23 @@
 			});
 
 			closeDialogButton.addEventListener("click", () => {
+				dialog.close();
+			});
+
+			const registerForm = document.getElementById("register-form");
+			const nameInput = document.getElementById("name");
+			const nameError = document.getElementById("name-error");
+
+			registerForm.addEventListener("submit", (e) => {
+				e.preventDefault(); 
+
+				if (nameInput.value.trim().length < 3) {
+					nameError.style.display = "inline";
+					return;
+				}
+
+				nameError.style.display = "none";
+
 				dialog.close();
 			});
 
