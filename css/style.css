@@ -231,9 +231,7 @@
 				transform: rotate(5deg) scale(1.15);
 			}
 
-			/*=====================================
-			  HERO SECTION (flexbox, week 5 task)
-			=====================================*/
+			
 
 			.hero {
 				display: flex;
@@ -278,9 +276,7 @@
 				margin: 0;
 			}
 
-			/*=====================================
-			  PILL BUTTONS (flexbox, week 5 task)
-			=====================================*/
+			
 
 			.pill-section {
 				display: flex;
